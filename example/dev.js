@@ -28,6 +28,15 @@ var render = ReactDOM.render
     })
 })(document.getElementById('example__dataCount'))
 
+// extend
+;(function (node) {
+    if (!node) {return}
+    require(['./extend.demo.js'], function (Demo) {
+        Demo = Demo.default || Demo
+        render(<Demo />, node)
+    })
+})(document.getElementById('example__extend'))
+
 // custom-style
 ;(function (node) {
     if (!node) {return}

@@ -36,3 +36,33 @@
     file: './lang.demo.js'
 }
 ````
+
+## props.render
+
+Copy props.render extend component.
+
+[../lib/props.js](../lib/props.js)
+
+<!--MR-H
+<div style="border:1px solid gray;height:20em;overflow:auto;" >
+-->
+
+<!--MARKRUN-REPLACE
+{
+    file: '../lib/props.js',
+    type: 'pre'
+}
+-->
+
+<!--MR-H
+</div>
+-->
+
+````demo
+{
+    title: 'basic',
+    html: '<div id="example__extend" >loading...</div>',
+    desc: 'Use props.render add input',
+    file: './extend.demo.js'
+}
+````
