@@ -1,0 +1,81 @@
+/* Although the file suffix is CSS, but it will be less compilation */
+/* The CSS specification: https://github.com/fast-flow/trees */
+/* Base style */
+html body .r-paging--isFirstPage .r-paging-firstPage {
+    display: none;
+}
+html body .r-paging--isLastPage .r-paging-lastPage {
+    display: none;
+}
+.r-paging-prevHasMorePage {
+    display: none;
+}
+html body .r-paging--prevHasMorePage .r-paging-prevHasMorePage {
+    display: inline;
+}
+.r-paging-nextHasMorePage {
+    display: none;
+}
+html body .r-paging--nextHasMorePage .r-paging-nextHasMorePage {
+    display: inline;
+}
+
+/* Themes */
+html .r-paging--themes-simple {
+    &.r-paging--isFirstPage {
+        .r-paging-prev {
+            opacity: 0.5;
+            cursor: default;
+        }
+    }
+    &.r-paging--isLastPage {
+        .r-paging-next {
+            opacity: 0.5;
+            cursor: default;
+        }
+    }
+    .r-paging-firstPage,
+    .r-paging-prevSomePage,
+    .r-paging-prevBatch,
+    .r-paging-page,
+    .r-paging-nextBatch,
+    .r-paging-nextSomePage,
+    .r-paging-lastPage,
+    .r-paging-prev,
+    .r-paging-next {
+      display: inline-block;
+      box-sizing: border-box;
+      border:1px solid #eee;
+      padding-left: 5px;
+      padding-right: 5px;
+      min-width: 25px;
+      min-height: 25px;
+      line-height: 25px;
+      text-align: center;
+      margin-left: 2px;
+      margin-right: 2px;
+      border-radius: 3px;
+      background-color: white;
+      cursor: pointer;
+      &:hover {
+        background-color:#efefef;
+        border-color:#ddd;
+      }
+    }
+    .r-paging-prevHasMorePage {
+        cursor: pointer;
+    }
+    .r-paging-nextHasMorePage {
+        cursor: pointer;
+    }
+    .r-paging-page {
+        background-color: #20a0ff;
+        color:white;
+        border-color: #20a0ff;
+        &:hover {
+            background-color: #20a0ff;
+            color:white;
+            border-color: #20a0ff;
+        }
+    }
+}
