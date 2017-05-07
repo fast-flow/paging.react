@@ -10,7 +10,7 @@
 {
     title: 'basic',
     html: '<div id="example__basic" >loading...</div>',
-    desc: 'describe',
+    desc: '`<Paging page={2} pageCount={10} pageSize={10}  />`',
     file: './basic.demo.js'
 }
 ````
