@@ -39,7 +39,7 @@ var Goto = React.createClass({
 })
 // props.render copy from the https://github.com/fast-flow/paging.react/blob/master/lib/props.js
 var MyPaging = React.createClass({
-    pagingRender: function (self, data, themesClassName) {
+    pagingRender: function (self, data, themesClassName, rootClassName) {
         var pcls = self.props.prefixClassName
         var getClassName = function (className) {
             return pcls + className
@@ -50,14 +50,6 @@ var MyPaging = React.createClass({
                 self.props.onChange(page)
             }
         }
-        var rootClassName = [
-            pcls,
-            themesClassName,
-            data.isFirstPage? getClassName('--isFirstPage'):'' ,
-            data.prevHasMorePage? getClassName('--prevHasMorePage'):'',
-            data.nextHasMorePage? getClassName('--nextHasMorePage'):'',
-            data.isLastPage? getClassName('--isLastPage'):''
-        ].join(' ')
         var lang = self.props.lang
         return (
             <div className={rootClassName} >
