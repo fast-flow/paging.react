@@ -1,7 +1,7 @@
 {
   "name": "paging.react",
   "main": "lib/index.js",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "React,Paging.Custom style!",
   "repository": "fast-flow/paging.react",
   "homepage": "http://fast-flow.github.io/paging.react",
@@ -19,7 +19,7 @@
     "paging": "0.2.2",
     "react": "0.14.8",
     "react-dom": "0.14.8",
-    "util.react": "^1.0.0"
+    "util.react": "^1.4.1"
   },
   "scripts": {
     "doc": "fis3 release -w -d ./output -r ./ -f config/fis-conf.js",
