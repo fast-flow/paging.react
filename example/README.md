@@ -60,7 +60,7 @@ Copy props.render extend component.
 
 ````demo
 {
-    title: 'basic',
+    title: 'extend',
     html: '<div id="example__extend" >loading...</div>',
     desc: 'Use props.render add input',
     file: './extend.demo.js'
