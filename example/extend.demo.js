@@ -14,8 +14,9 @@ var Goto = React.createClass({
             })
         }
     },
-    go: function () {
+    go: function (e) {
         this.props.onChange(Number(this.state.value))
+        e.preventDefault()
     },
     onChange: function (e) {
         this.setState({
@@ -30,32 +31,27 @@ var Goto = React.createClass({
     render: function () {
         const self = this
         return (
-            <div>
-                <input type="text" value={self.state.value} onChange={self.onChange} />
-                <button type="submit" onClick={self.go} >GO</button>
-            </div>
+            <form className={`${self.props.prefixClassName}-goto`} onSubmit={self.go}  >
+                <input type="text" className={`${self.props.prefixClassName}-goto-page`} value={self.state.value} onChange={self.onChange} />
+                <button type="text" className={`${self.props.prefixClassName}-goto-submit`} type="submit" >GO</button>
+            </form>
         )
     }
 })
 // props.render copy from the https://github.com/fast-flow/paging.react/blob/master/lib/props.js
 var MyPaging = React.createClass({
-    pagingRender: function (self, data, themesClassName, rootClassName) {
-        var pcls = self.props.prefixClassName
+    pagingRender: function (self, data,  rootClassName) {
         var getClassName = function (className) {
-            return pcls + className
+            return self.props.prefixClassName + className
         }
         var onChange = function (page) {
             if (page > 0 && page <= data.pageCount) {
-                console.log('onChange')
                 self.props.onChange(page)
             }
         }
         var lang = self.props.lang
         return (
             <div className={rootClassName} >
-                {/* Inset component */}
-                <Goto {...self.props} data={data} />
-                {/* Inset component */}
                 {
                     data.dataCount?
                     (
@@ -98,6 +94,9 @@ var MyPaging = React.createClass({
                 <span className={getClassName('-stats')}>
                     {data.page}/{data.pageCount}{lang.stats.unit}
                 </span>
+                {/* Inset component */}
+                <Goto {...self.props} data={data} />
+                {/* Inset component */}
             </div>
         )
     },
