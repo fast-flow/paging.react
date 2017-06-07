@@ -1,7 +1,7 @@
 {
   "name": "paging.react",
   "main": "lib/index.js",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "React,Paging.Custom style!",
   "repository": "fast-flow/paging.react",
   "homepage": "http://fast-flow.github.io/paging.react",
@@ -16,7 +16,7 @@
   ],
   "dependencies": {
     "classnames": "^2.2.5",
-    "paging": "0.2.2",
+    "paging": "0.2.3",
     "react": "0.14.8",
     "react-dom": "0.14.8",
     "util.react": "^1.4.1"
