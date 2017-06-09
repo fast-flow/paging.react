@@ -37,6 +37,7 @@ html body .r-paging--nextHasMorePage .r-paging-nextHasMorePage {
 html .r-paging--themes-simple {
     &.r-paging--noPaging {
         .r-paging-dataCount {
+            width: 100%;
             display: block;
             text-align: center;
         }
