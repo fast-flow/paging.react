@@ -7,6 +7,19 @@ html body .r-paging--isFirstPage .r-paging-firstPage {
 html body .r-paging--isLastPage .r-paging-lastPage {
     display: none;
 }
+html body .r-paging--noPaging {
+    .r-paging-prev,
+    .r-paging-firstPage,
+    .r-paging-page,
+    .r-paging-nextBatch,
+    .r-paging-nextHasMorePage,
+    .r-paging-lastPage,
+    .r-paging-next,
+    .r-paging-stats,
+    .r-paging-goto {
+        display: none;
+    }
+}
 .r-paging-prevHasMorePage {
     display: none;
 }
@@ -22,6 +35,12 @@ html body .r-paging--nextHasMorePage .r-paging-nextHasMorePage {
 
 /* Themes */
 html .r-paging--themes-simple {
+    &.r-paging--noPaging {
+        .r-paging-dataCount {
+            display: block;
+            text-align: center;
+        }
+    }
     &.r-paging--isFirstPage {
         .r-paging-prev {
             opacity: 0.5;

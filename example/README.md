@@ -66,3 +66,14 @@ Copy props.render extend component.
     file: './extend.demo.js'
 }
 ````
+
+## className noPaging
+
+````demo
+{
+    title: 'hasPaging',
+    html: '<div id="example__hasPaging" >loading...</div>',
+    desc: 'Use `${prefixClassName}--noPaging` hide some part',
+    file: './hasPaging.demo.js'
+}
+````
